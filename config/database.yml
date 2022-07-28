@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  username: postgres
+  password: Lorois.-124
+  host: localhost
+  port: 5432
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: gestor-proyectos_development
+
+test:
+  <<: *default
+  database: gestor-proyectos_test
+
+production:
+  <<: *default
+  database: gestor-proyectos_production
+  username: gestor-proyectos
+  password: <%= ENV["GESTOR-PROYECTOS_DATABASE_PASSWORD"] %>

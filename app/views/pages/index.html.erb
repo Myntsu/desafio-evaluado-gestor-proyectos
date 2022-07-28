@@ -1,0 +1,29 @@
+<h1>Create your new project</h1>
+<form action="/pages/create" method="get">
+    <div class="input-group mb-3">
+        <label for="name" class="input-group-text">Name</label>
+        <input name="name" type="text" class="form-control" id="name">
+    </div>
+    <div class="input-group mb-3">
+        <label for="description" class="input-group-text">Description</label>
+        <textarea name="description" cols="30" rows="10" class="form-control" id="description"></textarea>
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="date_start">Select the starting date</label>
+        <input name="date_start" type="date" class="form-control" id="date_start">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="date_finish">Select the finish date</label>
+        <input name="date_finish" type="date" class="form-control" id="date_finish">
+    </div>
+    <div class="input-group mb-3">
+        <label class="input-group-text" for="state">State</label>
+        <select name="state" class="form-select" id="state">
+            <option selected>Pick the current state...</option>
+            <option value="1">Proposal</option>
+            <option value="2">In progress</option>
+            <option value="3">Finished</option>
+        </select>
+    </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
